@@ -1,16 +1,20 @@
+#include <stdlib.h>
+#include <time.h>
 #include <stdio.h>
 /**
- * main - main block
- * Description: Print all numbers of base 10, starting from 0.
- * Return: 0
- */
+* main - print numbers from base 10
+* Description: prints numbers
+* and the prints is 0-9
+* Return: 0
+*
+**/
 int main(void)
 {
-  int i;
-  for (i = 0; i < 10; i++)
-    {
-      printf("%i", i);
-    }
-  putchar('\n');
-  return (0)
- }
+int a = 0;
+for (a = 0; a <= 9; a++)
+{
+printf("%d", a);
+}
+putchar(10);
+return (0);
+}
