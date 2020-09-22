@@ -14,24 +14,23 @@
 **/
 int main(void)
 {
-int i, j, k, l;
-for (i = 0; i < 1000; i++)
+int i, j;
+for (i = 0; i < 100; i++)
 {
-j = i / 100;
-k = (i / 10) % 10;
-l = i % 10; 
-if (j < k && k < l)
+for (j = i + 1; j < 100; j++)
 {
-putchar(j + '0');
-putchar(k + '0');
-putchar(l + '0');
-if (i < 700)
-{
+putchar(i / 10 + '0');
+putchar(i % 10 + '0');
+putchar(32);
+putchar(j / 10 + '0');
+putchar(j % 10 + '0');
+if (i == 98 && j == 99)
+continue;
+else
 putchar(44);
 putchar(32);
 }
 }
-}
-putchar('\n');
+putchar(10);
 return (0);
 }
