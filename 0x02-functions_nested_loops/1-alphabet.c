@@ -5,11 +5,12 @@
 **/
 void print_alphabet(void)
 {
-char c = 'a';
-while (c <= 'z')
+int i;
+i = 0;
+while (i < 26)
 {
-_putchar(c);
-c++;
+_putchar('a' + i);
+i++;
 }
 _putchar('\n');
 }
