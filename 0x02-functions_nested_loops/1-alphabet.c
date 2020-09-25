@@ -1,16 +1,16 @@
 #include "holberton.h"
+#include <stdio.h>
 /**
-* print_alphabet - Print alphabet in lowercase using only `_putchar`
-* Return: 0
+*print_alphabet - program
+*return: 0
+*
 **/
 void print_alphabet(void)
 {
-int i;
-i = 0;
-while (i < 26)
+char i;
+for (i = 'a' ; i <= 'z' ; i++)
 {
-_putchar('a' + i);
-i++;
+_putchar(i);
 }
 _putchar('\n');
 }
