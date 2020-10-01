@@ -4,12 +4,14 @@
 * @str: char array string type
 * Description: Can only use _putchar
 **/
-void _puts(char *str)
+int _strlen(char *i)
 {
-int i;
-for (i = 0; str[i] != '\0'; i++)
+int count;
+count = 0;
+while (*i != 0)
 {
-_putchar(str[i]);
+count++;
+i++;
 }
-_putchar('\n');
+return (count);
 }
