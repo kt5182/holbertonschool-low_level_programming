@@ -8,17 +8,20 @@
 * Numbers should be displayed in the same order they are stored in array.
 * You can only use _putchar to print.
 **/
-void print_array(int *a, int n)
+void puts_half(char *str)
 {
-int i;
+int i, pos;
 i = 0;
-for (n--; n >= 0; n--, i++)
+while ((*(str + i)) != 0)
+++i;
+if (i % 2 != 0)
+pos = (i / 2) + 1;
+else
+pos = i / 2;
+while ((*(str + pos)) != 0)
 {
-printf("%d", a[i]);
-if (n > 0)
-{
-printf(", ");
+_putchar((*(str + pos)));
+pos++;
 }
-}
-printf("\n");
+_putchar(10);
 }
