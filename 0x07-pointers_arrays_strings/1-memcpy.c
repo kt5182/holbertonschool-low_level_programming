@@ -1,19 +1,21 @@
 #include "holberton.h"
 /**
-* _strchr - locate character in a string
-* @s: char array string
-* @c: char to look for
-* Return: NULL if char not found, or pointer to first occurrence of char `c`
+* _memcpy - copy memory area
+* @dest: char array to copy into
+* @src: char array to copy from
+* @n: number of elements to copy
+* Return: pointer to `dest`
 **/
-char *_strchr(char *s, char c)
+char *_memcpy(char *dest, char *src, unsigned int n)
 {
-while (*s != '\0')
+char *yolo;
+yolo = dest;
+while (n > 0)
 {
-if (*s == c)
-return (s);
-else if (*(s + 1) == c)
-return (s + 1);
-s++;
+*dest = *src;
+dest++;
+src++;
+n--;
 }
-return (s + 1);
+return (yolo);
 }
