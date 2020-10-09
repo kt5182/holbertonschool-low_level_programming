@@ -10,18 +10,16 @@
 **/
 void puts_half(char *str)
 {
-int i, pos;
-i = 0;
-while ((*(str + i)) != 0)
-++i;
-if (i % 2 != 0)
-pos = (i / 2) + 1;
-else
-pos = i / 2;
-while ((*(str + pos)) != 0)
+int j, i = 0;
+while (*(str + i))
+i++;
+j = i / 2;
+if (i % 2)
+j += 1;
+while (j < i)
 {
-_putchar((*(str + pos)));
-pos++;
+_putchar(*(str + j));
+j++;
 }
-_putchar(10);
+_putchar('\n');
 }
