@@ -1,16 +1,15 @@
 #include "holberton.h"
 /**
-* _puts - print a string to stdout
-* @str: char array string type
-* Description: Can only use _putchar
+* _strlen - Returns the lenght os a string
+*
+* @s: The input string
+*
+* Return: The lenght of the string
 **/
 int _strlen(char *s)
 {
-int i;
-while (*s != '\0')
-{
+int i = 0;
+while (s[i] != 0)
 i++;
-s++;
-}
 return (i);
 }
